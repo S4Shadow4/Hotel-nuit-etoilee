@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservations de Chambres</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <section>
+            <div class="logo">
+                <h3>HOTEL <span id="nuit_color">NUIT </span> ETOILEE</h3>
+            </div>
+            
+        </section>
+
+        <menu>
+            <nav>
+                <ul>
+                    <li><a href="./commande.html">COMMANDES</a></li>
+                </ul>
+            </nav>
+        </menu>
+
+        <section class="auth">
+            <button class="signup"><a href="./Accueil.html">Accueil</a></button>
+            <button class="signup"><a href="./inscripton.html">Inscription</a></button>
+            <button class="login"><a href="./connexion.html">Connexion</a></button>
+        </section>
+    </header>
+
+    <div class="container">
+        <div class="content-container">
+            <h2>Réservations de Chambres</h2>
+
+            <!-- Formulaire de réservations de chambres -->
+            <form action="traitement_reservation.php" method="post">
+                <label for="type_chambre">Choisissez le type de chambre :</label>
+                <select id="type_chambre" name="type_chambre" required>
+                    <option value="standard">Chambre Standard</option>
+                    <option value="deluxe">Chambre Deluxe</option>
+                    <!-- Ajoutez d'autres options pour les types de chambres disponibles -->
+                </select>
+
+                <label for="date_arrivee">Date d'arrivée :</label>
+                <input type="date" id="date_arrivee" name="date_arrivee" required>
+
+                <label for="nombre_nuits">Nombre de Jours :</label>
+                <input type="number" id="nombre_nuits" name="nombre_nuits" required>
+
+                <label for="message_reservation">Message supplémentaire :</label>
+                <textarea id="message_reservation" name="message_reservation" rows="4"></textarea>
+
+                <button type="submit">Envoyer la Réservation</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

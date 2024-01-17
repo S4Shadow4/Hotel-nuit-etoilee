@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <section>
+            <div class="logo">
+                <h3>HOTEL <span id="nuit_color">NUIT </span> ETOILEE</h3>
+            </div>
+            
+        </section>
+
+        <menu>
+            <nav>
+                <ul>
+                    <li><a href="./reservation.html">RESERVATION</a></li>
+                    <li><a href="./commande.html">COMMANDES</a></li>
+                </ul>
+            </nav>
+        </menu>
+
+        <section class="auth">
+            <button class="login"><a href="./Accueil.html">Accueil</a></button>
+            <button class="signup"><a href="./inscripton.html">Inscription</a></button>
+        </section>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Connexion</h2>
+            <form action="connexion.php" method="post">
+                <label for="lastName">Nom:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+
+                <label for="loginPassword">Mot de passe:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>
