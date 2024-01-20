@@ -119,11 +119,10 @@ header {
     }
 }
 .presentation{
-    background-image: url(../img/hp.jpg);
+    background-image: url(../Assets/resort-1695717_1280.jpg );
     background-size: cover;
     justify-content: center;
     text-align: center;
-    color: #d3d3d3;
     margin-top: 100px;
     flex-direction: row-reverse;
     height: 600px;
@@ -132,8 +131,8 @@ header {
     font-size: 20px;
     div{
         h1{
-            margin: 0;
-            font-size: 70PX;
+            margin-top: -20%;
+            font-size: 70px;
         }
         .p1{
             font-size: 100px;
@@ -144,6 +143,9 @@ header {
         margin: 0;
     }
     
+}
+#after-welcome{
+    margin-top: -4%;
 }
   
 main {
@@ -425,4 +427,16 @@ footer{
       }
     }
 
+}
+
+.titleofmessage{
+    text-align: center;
+    font-size: 89px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.testofmessage{
+    align-items: center;
+    resize: none;
+    height: 90px;
+    width: 70px;
 }
