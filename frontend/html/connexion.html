@@ -34,18 +34,19 @@
     <div class="container">
         <div class="form-container">
             <h2>Connexion</h2>
-            <form action="connexion.php" method="post">
-                <label for="lastName">Nom:</label>
+            <form action="http://localhost:5000/user/connexion" method="post">
+                <label for="loginUsername">Nom:</label>
                 <input type="text" id="loginUsername" name="loginUsername" required>
-
+            
                 <label for="loginPassword">Mot de passe:</label>
                 <input type="password" id="loginPassword" name="loginPassword" required>
-
+            
                 <button type="submit">Se connecter</button>
             </form>
+            
         </div>
     </div>
 
-    
+    <script src="../javascript/connexion.js"></script>
 </body>
 </html>

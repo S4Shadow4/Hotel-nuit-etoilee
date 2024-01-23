@@ -91,8 +91,8 @@ header {
         align-items: center;
         animation: animation2 3s;
         .login {
-            background-color: blue;
-            border: 2px solid blue;
+            background-color: white;
+            border: 1px solid black;
             border-radius: 8px;
             height: 50%;
             width: 100%;
@@ -104,8 +104,8 @@ header {
             }
         }
         .signup {
-            background-color: red;
-            border: 2px solid white;
+            background-color: gray;
+            border: 1px solid white;
             border-radius: 8px;
             height: 50%;
             width: 100%;
@@ -143,6 +143,16 @@ header {
         margin: 0;
     }
     
+}
+.histoire{
+    height: 200px;
+    h2{
+        text-align: center;
+    }
+    p{
+        font-size: 1.2em;
+        text-align: center;
+    }
 }
 #after-welcome{
     margin-top: -4%;
@@ -188,7 +198,7 @@ main {
 }
 .com{
     background-color: beige;
-    h1{
+    h2{
         font-size: 40px;
         text-align: center;
     }
@@ -196,7 +206,10 @@ main {
         width: 300px;
         height: 200px;
         resize: none;
-        pointer-events: none;
+        /* pointer-events: none; */
+    }
+    .com-btn{ 
+        margin-left: 10px;
     }
 }
 
@@ -440,3 +453,11 @@ footer{
     height: 90px;
     width: 70px;
 }
+
+
+a{
+    text-decoration:none ;
+    &:hover{
+        color: white;
+    }
+} 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Messaging App</title>
+  <style>
+  </style>
+</head>
+<body>
+
+  <h1>Message App</h1>
+
+  <form id="messageForm">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+    <button type="button" onclick="sendMessage()">Send Message</button>
+  </form>
+
+  <script>
+    function sendMessage() {
+      const message = document.getElementById('message').value;
+
+      fetch('http://localhost:5000/messages/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: message }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Message sent successfully:', data);
+      })
+      .catch(error => {
+        console.error('Error sending message:', error);
+      });
+    }
+  </script>
+
+</body>
+</html>

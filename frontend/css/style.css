@@ -92,8 +92,8 @@ header .auth {
   animation: animation2 3s;
 }
 header .auth .login {
-  background-color: blue;
-  border: 2px solid blue;
+  background-color: white;
+  border: 1px solid black;
   border-radius: 8px;
   height: 50%;
   width: 100%;
@@ -105,8 +105,8 @@ header .auth .login a {
   font-size: 14px;
 }
 header .auth .signup {
-  background-color: red;
-  border: 2px solid white;
+  background-color: gray;
+  border: 1px solid white;
   border-radius: 8px;
   height: 50%;
   width: 100%;
@@ -139,6 +139,17 @@ header .auth .signup a {
 }
 .presentation h4 {
   margin: 0;
+}
+
+.histoire {
+  height: 200px;
+}
+.histoire h2 {
+  text-align: center;
+}
+.histoire p {
+  font-size: 1.2em;
+  text-align: center;
 }
 
 #after-welcome {
@@ -186,7 +197,7 @@ main .tet {
 .com {
   background-color: beige;
 }
-.com h1 {
+.com h2 {
   font-size: 40px;
   text-align: center;
 }
@@ -194,7 +205,10 @@ main .tet {
   width: 300px;
   height: 200px;
   resize: none;
-  pointer-events: none;
+  /* pointer-events: none; */
+}
+.com .com-btn {
+  margin-left: 10px;
 }
 
 .container {
@@ -403,6 +417,13 @@ footer section ul li:hover {
   resize: none;
   height: 90px;
   width: 70px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

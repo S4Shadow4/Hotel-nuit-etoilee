@@ -13,7 +13,6 @@
             <div class="logo">
                 <h3>HOTEL <span id="nuit_color">NUIT </span> ETOILEE</h3>
             </div>
-            
         </section>
 
         <menu>
@@ -36,24 +35,22 @@
         <div class="content-container">
             <h2>Réservations de Chambres</h2>
 
-            <!-- Formulaire de réservations de chambres -->
-            <form action="traitement_reservation.php" method="post">
+            <form action="http://localhost:5000/reservation/submit" method="post">
+                <label for="type_chambre">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                
                 <label for="type_chambre">Choisissez le type de chambre :</label>
-                <select id="type_chambre" name="type_chambre" required>
-                    <option value="standard">Chambre Standard</option>
-                    <option value="deluxe">Chambre Deluxe</option>
-                    <!-- Ajoutez d'autres options pour les types de chambres disponibles -->
+                <select id="type_chambre" name="typeChambre" required>
+                    <option value="S">Chambre Standard</option>
+                    <option value="L">Chambre Deluxe</option>
                 </select>
-
+            
                 <label for="date_arrivee">Date d'arrivée :</label>
-                <input type="date" id="date_arrivee" name="date_arrivee" required>
-
-                <label for="nombre_nuits">Nombre de Jours :</label>
-                <input type="number" id="nombre_nuits" name="nombre_nuits" required>
-
-                <label for="message_reservation">Message supplémentaire :</label>
-                <textarea id="message_reservation" name="message_reservation" rows="4"></textarea>
-
+                <input type="date" id="date_arrivee" name="dateArrivee" required>
+            
+                <label for="date_depart">Date de départ :</label>
+                <input type="date" id="date_depart" name="dateDepart" required>
+            
                 <button type="submit">Envoyer la Réservation</button>
             </form>
         </div>
