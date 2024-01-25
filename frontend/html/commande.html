@@ -38,24 +38,31 @@
             <h2>Commandes</h2>
 
             
-            <form action="traitement_commande.php" method="post">
+            <form action="http://localhost:5000/commande/submit" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required> 
+                
                 <label for="plat">Choisissez votre plat :</label>
                 <select id="plat" name="plat" required>
-                    <option value="p1">Carpaccio de Saumon et Avocat</option>
-                    <option value="p2">Sauce au Vin Rouge et aux Champignons</option>
+                    <option value=""></option>
+                    <option value="Carpaccio de Saumon et Avocat">Carpaccio de Saumon et Avocat</option>
+                    <option value="Sauce au Vin Rouge et aux Champignons">Sauce au Vin Rouge et aux Champignons</option>
+                    <option value="Avocat a la prune">Avocat a la prune</option>
+                    <option value="Poisson chat braisé">Poisson chat braisé</option>
+                    <option value="Saumon avocado">Saumon avocado</option>
+                    <option value="Sauce au Vinaigre et a la courgette">Sauce au Vinaigre et a la courgette</option>
+                    <option value="Alloco & poission fumé">Alloco & poission fumé</option>
+                    <option value="Ragout de boeuf">Ragout de boeuf</option>
                     
                 </select>
 
-                <label for="quantite">Quantité :</label>
-                <input type="number" id="quantite" name="quantite" required>
-
-                <label for="message">Message supplémentaire :</label>
-                <textarea id="message" name="message" rows="4"></textarea>
+                <label for="date">Date de commande :</label>
+                <input type="datetime-local" id="date" name="date" required>
 
                 <button type="submit">Envoyer la Commande</button>
             </form>
         </div>
     </div>
-
+    <script src="../javascript/commande.js"></script>
 </body>
 </html>

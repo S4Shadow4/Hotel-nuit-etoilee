@@ -36,11 +36,11 @@
             <h2>Réservations de Chambres</h2>
 
             <form action="http://localhost:5000/reservation/submit" method="post">
-                <label for="type_chambre">Nom :</label>
-                <input type="text" id="nom" name="nom" required>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>                
                 
-                <label for="type_chambre">Choisissez le type de chambre :</label>
-                <select id="type_chambre" name="typeChambre" required>
+                <label for="typeChambre">Choisissez le type de chambre :</label>
+                <select id="typeChambre" name="typeChambre" required>
                     <option value="S">Chambre Standard</option>
                     <option value="L">Chambre Deluxe</option>
                 </select>
@@ -55,6 +55,6 @@
             </form>
         </div>
     </div>
-
+    <script src="../javascript/reservation.js"></script>
 </body>
 </html>

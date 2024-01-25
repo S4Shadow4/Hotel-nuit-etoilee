@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            alert(`Mr./Mme ${lastName}, Votre inscription s'est realisé sans encombre`);
         })
         .catch(error => {
             console.error("Erreur lors de l'envoi des données au serveur:", error);

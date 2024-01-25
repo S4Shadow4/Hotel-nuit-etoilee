@@ -1,8 +1,8 @@
 const express= require("express");
-const verifyjwts = require("../middleware/verifyjwts");
-profilCtrl = require("../Controllers/profilController");
+const gerantCtrl= require("../controllers/gerantController");
+const router =  express.Router();
 
-const router = express.Router();
-
-router.get("/select",verifyjwts, profilCtrl.getALLprofil) 
-module.exports = router;
+router.post("/signup", gerantCtrl.signup);
+router.post("/connexion", gerantCtrl.login); 
+router.get("/informations", gerantCtrl.getInformations); 
+module.exports = router;            

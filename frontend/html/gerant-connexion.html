@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gerant-authentification.css">
 
 </head>
 <body>
@@ -13,26 +13,30 @@
   <div class="furie">
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form id="inscription-form" action="http://localhost:5000/gerant/signup" method="POST">
                 <h1>Create Account</h1>
-                <span>Or use your email for registeration</span>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Second name">
-                <input type="number" id="age" name="age" required placeholder="Âge">
-                <input type="text" id="contact" name="contact" required placeholder="Contact">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button><a href="gerant.html">Sign Up</a></button>
+                <span>Or use your email for registration</span>
+                <input type="text" placeholder="Name" id="lastName" required> 
+                <input type="text" placeholder="Second name" id="firstName" required>
+                <input type="number" id="age" name="age" required placeholder="Âge" id="age">
+                <select name="gender" id="gender" required>
+                    <option value="" ></option>
+                    <option value="Masculin">Masculin</option>
+                    <option value="Feminin">Feminin</option>
+                </select>
+                <input type="password" placeholder="Password" id="password" required>
+                <input type="text" id="contact" name="contact" required placeholder="Contact" id="contact">
+                <button type="submit">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form id="connexion-form" action="http://localhost:5000/gerant/Connexion" method="post">
                 <h1>Login</h1>
-                <span>Or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <span>Or use your name & password</span>
+                <input type="text" id="loginUsername" name="username" required placeholder="Username">
+                <input type="password" id="loginPassword" name="password" required placeholder="Password">
                 <a href="#">Forget Your password</a>
-                <button><a href="gerant.html">Sign In</a></button>
+                <button type="submit">Sign In</button>
             </form>
         </div>
 

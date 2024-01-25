@@ -284,14 +284,12 @@ main {
 
 .content-container {
     form {
-        label {
-            margin-bottom: 8px;
-            display: block;
-        }
 
         select,
         input[type="date"],
+        input[type="datetime-local"],
         input[type="number"],
+        input[type="text"],
         textarea {
             padding: 8px;
             margin-bottom: 16px;
@@ -301,7 +299,7 @@ main {
             width: 100%;
         }
 
-        button {
+        button { 
             padding: 10px;
             background-color: #3498db;
             color: #fff;

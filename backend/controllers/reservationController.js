@@ -1,9 +1,9 @@
 const dataBase = require("../config/mysql");
 
 exports.submitReservation = (req, res) => {
-    const { nom, dateArrivee, dateDepart, typeChambre } = req.body;
+    const { nom, typeChambre, dateArrivee, dateDepart } = req.body;
 
-    const getClientIdQuery = "SELECT id_client FROM clients WHERE nom_client = ?";
+    const getClientIdQuery = "SELECT id_client FROM `clients` WHERE nom_client = ?";
 
     dataBase.query(getClientIdQuery, [nom], (getClientError, clientResult) => {
         if (getClientError) {
@@ -16,7 +16,7 @@ exports.submitReservation = (req, res) => {
 
         const clientId = clientResult[0].id_client;
 
-        const getAvailableRoomQuery = "SELECT id_chambre FROM chambres WHERE type_chambre = ? AND statut_chambre = 'D' ORDER BY RAND() LIMIT 1";
+        const getAvailableRoomQuery = "SELECT id_chambre FROM `chambres` WHERE type_chambre = ? AND statut_chambre = 'D' ORDER BY RAND() LIMIT 1";
 
         dataBase.query(getAvailableRoomQuery, [typeChambre], (getRoomError, roomResult) => {
             if (getRoomError) {
@@ -29,11 +29,13 @@ exports.submitReservation = (req, res) => {
 
             const roomId = roomResult[0].id_chambre;
 
-            const updateRoomQuery = "UPDATE chambres SET statut_chambre = 'O', id_client = ? WHERE id_chambre = ?";
-            dataBase.query(updateRoomQuery, [clientId, roomId], (updateError) => {
-                if (updateError) {
-                    return res.status(500).json({ error: "Erreur interne du serveur lors de la mise à jour de la chambre" });
-                }
+            const updateRoomQuery = "UPDATE `chambres` SET statut_chambre = 'O' WHERE id_chambre = ?";
+
+            dataBase.query(updateRoomQuery, [roomId], (updateRoomError) => {
+                if (updateRoomError) {
+                    console.error("Erreur SQL lors de la mise à jour du statut de la chambre :", updateRoomError.sqlMessage);
+                    return res.status(500).json({ error: "Erreur interne du serveur lors de la mise à jour du statut de la chambre" });
+                } 
 
                 const insertReservationQuery = "INSERT INTO reservations (id_client, id_chambre, date_debut, date_fin) VALUES (?, ?, ?, ?)";
                 dataBase.query(insertReservationQuery, [clientId, roomId, dateArrivee, dateDepart], (insertError) => {
@@ -42,6 +44,7 @@ exports.submitReservation = (req, res) => {
                     }
 
                     return res.status(201).json({ message: "Réservation effectuée avec succès" });
+                    alert(" Votre reservation a été effectuer avec succes ");
                 });
             });
         });

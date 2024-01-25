@@ -26,7 +26,7 @@
                <a href="#" id="Commandes"><i class="fas fa-chart-bar">Commandes</i></a>
                <a href="#"><i class="fas fa-chart-bar">Réservation</i></a>
                <a href="#"><i class="fas fa-chart-bar"></i>Méssagerie</a>
-               <a href="#"><i class="fas fa-chart-bar">Se deconnecter</i></a>
+               <a href="../html/gerant-connexion.html"><i class="fas fa-chart-bar">Se deconnecter</i></a>
             </div>
         </aside>
 
@@ -91,7 +91,7 @@
             <div id="commandesContent" style="display: none;">
 
                 <h2>Liste des Commandes</h2>
-                <table>
+                <table id="first">
                   <thead>
                     <tr>
                       <th>Nom</th>
@@ -113,32 +113,35 @@
 
             <div class="recent-orders">
                 <h2>Réservation</h2>
-                <table>
+                <table id="reservationsTable">
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Room</th>
+                            <th>Sexe</th>
+                            <th>age</th>
+                            <th>Room Id</th>
                             <th>Price</th>
                             <th>Status</th>
-                            <th></th>
+                            <th>date Arrivee</th>
+                            <th>date Depart</th>
                         </tr>
-                        
                     </thead>
-                    <tbody></tbody>
+                    <tbody id="reservationsTableBody"></tbody>
                 </table> <br> <br> <br> <br>
                 <h2>Commandes</h2>
-                <table>
+                <table id="commandes">
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Room</th>
+                            <th>Room Id</th>
                             <th>Price</th>
                             <th>Status</th>
-                            <th></th>
+                            <th>Plats Comd</th>
+                            <th>Date Comd</th>
                         </tr>
                         
                     </thead>
-                    <tbody></tbody>
+                    <tbody id="commandeTableBody"></tbody>
                 </table>
                 <a href="#">Show All</a>
             </div>
@@ -154,10 +157,10 @@
                 </button>
                 <div class="dark-mode">
                     <span class="material-icons-sharp active">
-                        light_mode
+                        L_mode
                     </span>
                     <span class="material-icons-sharp">
-                        dark_mode
+                        D_mode
                     </span>
                 </div>
 
@@ -166,7 +169,7 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="images/logo.png">
+                    <img src="../Assets/c1.jpg">
                     <h2>HÔTEL NUIT <br> ÉTOILÉ</h2>
                 </div>
             </div>

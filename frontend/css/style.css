@@ -269,13 +269,11 @@ main .tet {
   background-color: #2980b9;
 }
 
-.content-container form label {
-  margin-bottom: 8px;
-  display: block;
-}
 .content-container form select,
 .content-container form input[type=date],
+.content-container form input[type=datetime-local],
 .content-container form input[type=number],
+.content-container form input[type=text],
 .content-container form textarea {
   padding: 8px;
   margin-bottom: 16px;

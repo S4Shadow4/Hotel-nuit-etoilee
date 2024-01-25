@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
 
         const nom = document.getElementById('nom').value;
-        const typeChambre = document.getElementById('type_chambre').value;
+        const typeChambre = document.getElementById('typeChambre').value;
         const dateArrivee = document.getElementById('date_arrivee').value;
         const dateDepart = document.getElementById('date_depart').value;
 
         const formData = {
             nom: nom,
-            type_chambre: typeChambre,
+            typeChambre: typeChambre,
             dateArrivee: dateArrivee,
             dateDepart: dateDepart
         };
@@ -24,9 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            alert(`Mr./Mme ${nom}, Votre reservation a été effectuée avec succes`);
         })
         .catch(error => {
             console.error("Erreur lors de l'envoi des données au serveur:", error);
         });
     });
+
 });
