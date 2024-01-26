@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-test.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section>
+            <div class="logo">
+                <h3>HOTEL <span id="nuit_color">NUIT </span> ETOILEE</h3>
+            </div>
+            
+        </section>
+
+        <menu>
+            <nav>
+                <ul>
+                    <li><a href="./reservation.html">RESERVATION</a></li>
+                    <li><a href="./commande.html">COMMANDES</a></li>
+                </ul>
+            </nav>
+        </menu>
+
+        <section class="auth">
+            <button class="signup"><a href="./inscripton.html">Inscription</a></button>
+            <button class="login"><a href="./connexion.html">Connexion</a></button>
+        </section>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Envoyer un message au client:</h2>
+            <form action="/inscription" method="post">
+                <input type="text" id="client-name" name="client-name" required placeholder="Nom du client">
+                <input type="text" id="lastName" name="lastName" required placeholder="Name">
+                <textarea name="comments" id="comments" cols="10" rows="3" placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+<table id="message">
+    <caption>Cliquer pour <a href="">ici</a> afficher</caption>
+    <thead>
+        <th>Message</th>
+        <th>Date Message</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>firt</td>
+            <td>23</td>
+        </tr>
+    </tbody>
+</table>
+<script src="../javascript/messagerie-gerant.js"></script>
+</body>
+</html>

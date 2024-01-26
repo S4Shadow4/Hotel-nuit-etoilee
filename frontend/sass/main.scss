@@ -459,3 +459,20 @@ a{
         color: white;
     }
 } 
+
+#messageTable{
+    height: 100%;
+    width: 10%;
+    float: right;
+    margin-top: -11%;
+    font-size: 2em;
+}
+#message{
+    resize: none;
+}
+th,td{
+    border: 1px solid gray;
+}
+table{
+    border-collapse: collapse;
+}
